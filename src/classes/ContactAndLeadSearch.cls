@@ -8,7 +8,7 @@ public class ContactAndLeadSearch {
         
         searchh=search.query(str);
        
-        system.debug(searchh);
+       
         return searchh; 
               
                     

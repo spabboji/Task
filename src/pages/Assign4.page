@@ -1,0 +1,42 @@
+<apex:page controller="Assign4" standardStylesheets="false" showHeader="false" sidebar="false">
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">   
+        <head>
+            <title>Assignment 4</title>
+            <apex:stylesheet value="{!URLFOR($Resource.slds, 'assets/styles/salesforce-lightning-design-system-vf.css')}" /> 
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        </head>
+        <body>
+   			<apex:form >
+   			<div class="slds">              
+                <div class="slds-grid slds-wrap">
+                    <div class="slds-col--padded slds-size--1-of-1  slds-medium-size--4-of-6 slds-large-size--8-of-12">
+   						<label class="slds-form-element__label" for="inputAcc">Enter Email or Phone</label>
+                   		<apex:inputText id="inputAcc" styleclass="slds-input" value="{!s}">
+                		<apex:actionSupport action="{!SearchText}" event="onchange" rerender="email" status="getstartedstatus"/>
+                		</apex:inputText>
+                	</div> 
+                </div>
+                 <div class="slds-col--padded slds-size--1-of-1  slds-medium-size--2-of-12 slds-large-size--4-of-12">
+                    <div class="slds-form-element">
+                        <apex:actionStatus id="getstartedstatus"> 
+                            <apex:facet name="stop">
+                               <apex:commandButton id="btnsearch" value="Search" styleclass="slds-button slds-button--brand" action="{!SearchText}" style="margin-top:20px;" rerender="email" status="getstartedstatus"/>    </apex:facet>
+                            		<apex:facet name="start"> 
+                            		<apex:commandButton id="btnsearchdisable" value="Searching..." disabled="true" styleclass="		slds-button slds-button--brand" style="margin-top:20px;" />
+                            		</apex:facet>        
+                        			</apex:actionStatus>
+                    			</div>
+                			</div>
+                		<div>
+                		</div>
+                	
+						<br/>
+                	<apex:outputLabel id="email">
+                	{!s}
+                </apex:outputLabel>
+                </div>
+                
+   			</apex:form>
+  		</body>
+    </html>
+</apex:page>

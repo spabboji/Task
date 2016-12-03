@@ -1,0 +1,4 @@
+<apex:page >
+    Email : {!$User.Username}  <br/>
+   	Phone : {!$User.Phone}
+</apex:page>

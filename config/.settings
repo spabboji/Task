@@ -1,0 +1,17 @@
+{
+    "projectName": "Task",
+    "username": "sravanip@snimbus.com",
+    "id": "d3cd7540-acbe-11e6-8dd1-4163960ca541",
+    "namespace": "",
+    "orgType": "developer",
+    "loginUrl": "https://login.salesforce.com/",
+    "instanceUrl": "https://ap2.salesforce.com",
+    "workspace": "C:\\Users\\S NIMBUS\\Documents",
+    "subscription": [
+        "ApexClass",
+        "ApexComponent",
+        "ApexPage",
+        "ApexTrigger",
+        "StaticResource"
+    ]
+}

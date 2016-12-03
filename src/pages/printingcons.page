@@ -1,0 +1,19 @@
+<apex:page Controller="SravaniEx">
+    <apex:form >
+    	<apex:pageBlock title="Account">
+            
+            Accountname: <apex:inputText value="{!accName}"/>
+            
+            <apex:pageBlockButtons location="bottom" >
+            	<apex:commandButton value="show" action="{!show}"/>
+            </apex:pageBlockButtons>
+            
+           	<apex:pageBlockTable value="{!cons}" var="b">
+                <apex:column value="{!b.firstname}" />
+                 <apex:column value="{!b.lastname}" />
+                 <apex:column value="{!b.phone}" />
+            </apex:pageBlockTable>
+            
+            </apex:pageBlock>        
+    </apex:form>
+</apex:page>

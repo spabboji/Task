@@ -1,0 +1,6 @@
+<apex:page title="Welcome to Snimbus">
+    <h1>
+        Welcome to Snimbus
+    </h1>
+    <apex:image id="theImage" url="http://nimbus.cit.ie/wp-content/uploads/2014/01/Nimbus-logo-x5.png" width="500" height="200"/>
+</apex:page>

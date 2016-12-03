@@ -1,0 +1,12 @@
+<apex:page standardController="Lead" recordSetVar="lead">
+    <apex:form >
+        <apex:pageBlock title="Details" >
+            <apex:commandLink value="clickhere" action="https://ap2.lightning.force.com/one/one.app#/sObject/Lead/home"/>
+                <apex:pageBlockTable value="{!lead}" var="a" style="Lead">
+                    <apex:column value="{!a.name}"/>
+                    <apex:column value="{!a.email}"/>
+                    <apex:column value="{!a.phone}"/>
+                </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

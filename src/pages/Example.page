@@ -1,0 +1,10 @@
+<apex:page standardController="CustomProduct__c">
+    <apex:form >
+        <apex:pageblock >
+            <apex:pageblocksection columns="1">
+                <apex:inputfield value="{!CustomProduct__c.name}"/>
+                <apex:inputfield value="{!CustomProduct__c.Quantity__c}"/>
+            </apex:pageblocksection>
+        </apex:pageblock>
+    </apex:form>
+</apex:page>

@@ -1,6 +1,6 @@
 public class reversenumber {
 	
-    public static void num(integer n){
+    public static integer num(integer n){
         
         integer reverse=0;
         while(n!=0){
@@ -11,5 +11,6 @@ public class reversenumber {
        
         } 
          system.debug(reverse);
+         return reverse;
     }
 }

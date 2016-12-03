@@ -1,6 +1,6 @@
 public class CurrentDetails {
     
-    public static void demo()
+    public static user demo()
     {
            
         string userids;
@@ -11,8 +11,11 @@ public class CurrentDetails {
        user u=new user();
         
        u=[select name,email,phone from user where id=:userids];
-       
-        System.debug('name='+ u.name +',email='+ u.Email +',phone='+ u.Phone);
+       system.debug(u.name);
+        system.debug(u.email);
+        system.debug(u.phone);
+
+        return u;
             
     }
 }

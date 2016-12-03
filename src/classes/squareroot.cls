@@ -1,17 +1,17 @@
 public class squareroot {
  		
     	
-      public static void demo(integer n){
+      public static list<long> demo(integer n){
           
-          long s=0;
+          list<long> s=new list<long>();
            
           for(integer i=0;i<n;i++){
               
-              s=(s+1)*(s+1);
-              
-              system.debug(s);
-                    
+              i=(i+1)*(i+1);
+              s.add(i);
+              system.debug(i);
+                
           }   
-         
+         return s;    
         }
     }

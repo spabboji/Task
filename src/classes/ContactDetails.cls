@@ -1,17 +1,16 @@
-public class ContactDetails {    
-    public static void display(){
+public class ContactDetails {
+
+    public static string display(){
         
-        //Getting all contacts in a list 
+        Contact cons=new Contact();
         
-        List<Contact> cons=new List<Contact>();
+        cons=[select firstname,lastname from contact limit 1];
         
-        cons=[select firstname,lastname from contact limit 5];
+        string str=cons.firstname.capitalize() +' '+ cons.lastname.capitalize();
+
+        System.debug(str);
         
-       //Taking one by one record and doing capitalizing 
-       
-        	for(Contact c:cons){
-           
-         		System.debug( c.firstname.capitalize() +' '+ c.lastname.capitalize());
-        }        
+          return str; 		
+        } 
+             
     }
-}

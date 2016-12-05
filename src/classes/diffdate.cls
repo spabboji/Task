@@ -1,9 +1,9 @@
 public class diffdate {
-      public static void doDateFormat(string input1,string input2){
+      public static string doDateFormat(string input1,string input2){
           
          DateTime dt1=DateTime.valueOf(input1);
          DateTime dt2=DateTime.valueOf(input2);
-          
+         string dateformat; 
           if(input1!=null && input2!=null)
           {    
           integer years1=dt1.year()-dt2.year();    
@@ -29,8 +29,12 @@ public class diffdate {
                     stryear = ''+(years1-1);
                 }
             }*/
-         system.debug('days='+ days1 +',months='+ mont1 +',years='+ years1 +',seconds='+ secondss1 +',minutes= '+ minutes1+',hours= '+ hours1);
+          dateformat='days='+ days1 +',months='+ mont1 +',years='+ years1 +',seconds='+ secondss1 +',minutes= '+ minutes1+',hours= '+ hours1;
+         system.debug(dateformat);
+        
              
-          }     
+          }  
+           return dateformat;   
     }
+
 }

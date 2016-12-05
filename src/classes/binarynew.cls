@@ -1,8 +1,8 @@
 public class binarynew {
     
-     public static void show()
+     public static string show(string bin1,string bin2)
    {
-       String bin1 ='100101',bin2='0101101';
+      
       	integer i = 0;
        long remainder = 0;
        long[] tempArray= new long[2000];
@@ -23,5 +23,7 @@ public class binarynew {
         sum += tempArray[i--];
    }
      system.debug('Sum of two binary numbers: '+sum);
+     return sum;
    }
+
 }

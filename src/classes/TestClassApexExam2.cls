@@ -38,9 +38,25 @@ public class TestClassApexExam2 {
             accts.add(a);
         }
         insert accts;
-         
-              
-        
+
+        string s1='2016, 11, 23, 4, 30, 30';
+        string s2='2012, 01, 13, 2, 30, 00';
+        Datetime d1=DateTime.valueOf(s1);
+        Datetime d2=DateTime.valueOf(s2);
+
+        //DateTime dt1=DateTime.valueOf(d1)
+        //DateTime dt2=DateTime.valueOf(d2);
+          
+          if(d1!=null && d2!=null)
+          {    
+          integer years1=d1.year()-d2.year();    
+          integer mont1=d1.month()-d2.month();
+          integer days1=d1.day()-d2.day();
+          integer secondss1=d1.second()-d2.second();
+          integer minutes1=d1.minute()-d2.minute();
+          integer hours1=d1.hour()-d2.hour();
+        }
+
 
         integer rev=0,n=2345;
         while(n!=0){       
@@ -48,9 +64,20 @@ public class TestClassApexExam2 {
         rev=rev +(math.mod(n,10));
         n= n/10;
       
-        } 
+        }
+
+        list<product2> pd=new list<product2>();
+        integer numdescriptions=5; 
+        for(Integer i=0;i<numdescriptions;i++) {
+
+            product2 pp = new product2(description='this is a Testproduct' +i,name='name11');
+
+            pd.add(pp);
+        }
+        insert pd;
          
     }
+
 
     @isTest
         static void test1(){
@@ -96,6 +123,24 @@ public class TestClassApexExam2 {
     static void test6(){
         List<Account> a=Accountnames.show();
         system.assertEquals([select name,id from Account ORDER BY name],a);        
+    }
+@isTest
+    static void test7(){
+       string s1='00010';
+       string s2='00011';
+       string result=binarynew.show(s1,s2);
+       system.assertEquals('0101',result);
+    }
+@isTest
+    static void test8(){
+        List<product2> p1=products.task();
+        system.assertEquals([select id,name,description from product2 where description like '%a%'],p1);
+
+    }
+@isTest
+    static void test9(){
+       string re=diffdate.doDateFormat('2020, 11, 23, 4, 30, 30','2008, 09, 14, 4, 30, 30');
+       System.assertEquals(4, 10, 10, 2, 00, 30,re); 
     }
 
 }

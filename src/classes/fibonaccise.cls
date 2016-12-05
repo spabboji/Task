@@ -1,27 +1,20 @@
 public class fibonaccise {
-	 public static void fibo(integer n) {
-         //logic for printing series fibonacci like 0 1 1 2 3 5............
-        if (n == 0) {
-            
-            System.debug('0');
-            
-        } else if (n == 1) {
-            
-            System.debug('0 1');
-            
-        } else {
-            
-            System.debug('0 1 ');
-            
-            integer a = 0;
-            integer b = 1;
-            
-            for (integer i = 1; i < n; i++) {
-                integer nn = a + b;
-                System.debug(nn + '');
-                a = b;
-                b = nn;
-            }
+
+    public static list<integer> demo(){
+
+        integer li=20;
+        list<integer> actualsereis=new list<integer>();
+        integer[] series=new integer[li];
+        series[0]=0;
+        series[1]=1;
+        for(integer i=2;i<li;i++){
+           series[i]=series[i-1]+series[i-2];            
         }
+        for(integer i=0;i<li;i++){
+            actualsereis.add(series[i]);
+            system.debug(actualsereis);
+        }
+         return actualsereis;
     }
- }
+
+}
